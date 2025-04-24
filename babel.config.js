@@ -5,10 +5,12 @@ module.exports = {
       'module-resolver',
       {
         root: ['./'],
-        alias:{
-          src: './src'
-        }
-      }
-    ]
-  ]
+        alias: {
+          src: './src',
+        },
+      },
+    ],
+    '@babel/plugin-proposal-export-namespace-from',
+    'react-native-reanimated/plugin'
+  ],
 };

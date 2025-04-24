@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../app';
+import { RootStackParamList } from 'src/navigations/screenNavigation';
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -17,6 +17,10 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
         title="Go to Profile"
         onPress={() => navigation.navigate('Profile')}
       />
+      <Button
+        title='Go to Settings'
+        onPress={()=> navigation.navigate('Settings')}/>
+
     </View>
   );
 };
