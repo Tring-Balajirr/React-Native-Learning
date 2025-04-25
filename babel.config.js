@@ -6,11 +6,11 @@ module.exports = {
       {
         root: ['./'],
         alias: {
-          src: './src',
-        },
-      },
+          src: './src'
+        }
+      }
     ],
     '@babel/plugin-proposal-export-namespace-from',
     'react-native-reanimated/plugin'
-  ],
+  ]
 };
