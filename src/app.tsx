@@ -1,10 +1,11 @@
-import 'src/gesture-handler';
+import '../gesture-handler';
 import React from 'react';
 import {StatusBar, useColorScheme, View} from 'react-native';
 import { colors } from 'src/shared/styles';
 import { StackNavigator, TabNavigator, DrawerNavigator } from 'src/navigations/screenNavigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import CustomBar from 'src/components/bottomTabNavigator/bottomTabNavigator';
 
 enum Theme{
   LIGHT = 'light',
@@ -12,7 +13,7 @@ enum Theme{
 }
 
 const App = () => {
-  const isDarkMode = useColorScheme() === Theme.DARK;
+  const isDarkMode = useColorScheme() === Theme.LIGHT;
   const backgroundStyle = {
     backgroundColor: isDarkMode ? colors.lighter : colors.darker,
     flex:1
@@ -25,9 +26,10 @@ const App = () => {
           barStyle={isDarkMode ? 'light-content' : 'dark-content'}
           backgroundColor={backgroundStyle.backgroundColor}
         />
-      <TabNavigator />
+      {/* <TabNavigator /> */}
       {/* <DrawerNavigator/> */}
       {/* <StackNavigator/> */}
+      <CustomBar />
     </View>
     </NavigationContainer>
     </SafeAreaProvider>
